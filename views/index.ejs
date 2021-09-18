@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ChatMe</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <section>
+      <h1>chatME</h1>
+      <ul class="message-field"></ul>
+      <div class="input-box">
+        <form class="user-input-box">
+          <label for="username">Enter your name:</label>
+          <input type="text" name="username" id="username" autofocus>
+        </form>
+        <form class="message-send-box">
+          <label for="message"></label>
+          <input type="text" name="message" id="message" autocomplete="new-password">
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
+    <script src="chat.js"></script>
+  </body>
+</html>

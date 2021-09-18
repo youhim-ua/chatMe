@@ -1,0 +1,28 @@
+{
+  "name": "chatme",
+  "version": "1.0.0",
+  "description": "chat on websockets",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server.js",
+    "start:dev": "nodemon ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youhim-ua/chatMe.git"
+  },
+  "author": "chepur-krytskyi andrii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youhim-ua/chatMe/issues"
+  },
+  "homepage": "https://github.com/youhim-ua/chatMe#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "socket.io": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

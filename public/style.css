@@ -1,0 +1,159 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+section {
+  height: 100%;
+}
+
+h1 {
+  display: inline-block;
+  width: 100%;
+  height: 5%;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.message-field {
+  width: 100%;
+  height: 80%;
+  padding: 20px;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.message {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #5c90c7;
+  overflow: hidden;
+}
+
+.message:nth-child(even) {
+  background-color: green;
+  color: white;
+}
+
+.input-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 15px;
+  border-top: 2px solid lavender;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: #0f2027; /* fallback for old browsers */
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 0px -5px 13px 1px rgba(255, 255, 255, 0.37);
+  -moz-box-shadow: 0px -5px 13px 1px rgba(255, 255, 255, 0.37);
+  box-shadow: 0px -5px 13px 1px rgba(255, 255, 255, 0.37);
+}
+
+.user-input-box > label {
+  color: white;
+}
+
+.user-input-box > input {
+  margin-bottom: 20px;
+  padding: 0 8px;
+  width: 15%;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  border: 2px solid rgba(9, 117, 121, 1);
+  outline: none;
+  transition: border 0.4s ease-in;
+}
+
+.message-send-box {
+  display: flex;
+}
+
+.message-send-box > input {
+  width: 90%;
+  height: 40px;
+  padding: 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  border: 2px solid rgba(9, 117, 121, 1);
+  outline: none;
+  transition: border 0.4s ease-in;
+}
+
+.user-input-box > input:focus,
+.message-send-box > input:focus {
+  border-color: rgb(36, 248, 28);
+}
+
+.message-send-box > button {
+  position: relative;
+  width: 10%;
+  height: 40px;
+  margin-left: 15px;
+  border-radius: 5px;
+  border: 2px solid rgba(9, 117, 121, 1);
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease-in;
+  overflow: hidden;
+}
+
+.message-send-box > button::after {
+  display: block;
+  position: absolute;
+  bottom: -250px;
+  left: -200px;
+  content: "";
+  width: 300px;
+  height: 250px;
+  z-index: -10;
+  transform: translate(0, 0) rotate(20deg);
+  background-color: rgb(21, 253, 0);
+  transition: all 0.4s ease-in;
+}
+
+.message-send-box > button:hover {
+  transition: all 0.4s ease-in;
+  background-color: transparent;
+}
+
+.message-send-box > button:hover::after {
+  transition: all 0.4s ease-in;
+  transform: translate(100px, -100px) rotate(20deg);
+}
