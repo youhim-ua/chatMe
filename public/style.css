@@ -20,6 +20,7 @@ body {
     #2c3e50,
     #bdc3c7
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Fira Sans", sans-serif;
 }
 
 section {
@@ -43,17 +44,28 @@ h1 {
   list-style: none;
 }
 
-.message {
-  margin-top: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #5c90c7;
-  overflow: hidden;
+@keyframes entering {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.message:nth-child(even) {
-  background-color: green;
-  color: white;
+.message {
+  margin-top: 10px;
+  background-color: transparent;
+  overflow: hidden;
+  animation: entering 400ms linear forwards;
+}
+
+.message > p {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border-bottom-left-radius: 0;
+  background-color: rgb(255, 255, 255);
 }
 
 .input-box {
@@ -148,12 +160,14 @@ h1 {
   transition: all 0.4s ease-in;
 }
 
-.message-send-box > button:hover {
+.message-send-box > button:hover,
+.message-send-box > button:focus {
   transition: all 0.4s ease-in;
   background-color: transparent;
 }
 
-.message-send-box > button:hover::after {
+.message-send-box > button:hover::after,
+.message-send-box > button:focus::after {
   transition: all 0.4s ease-in;
   transform: translate(100px, -100px) rotate(20deg);
 }

@@ -23,9 +23,9 @@ function socketProcessing() {
     sendMessageFormRef.reset();
   });
 
-  socket.on('new_message', (data) => {
+  socket.addEventListener('new_message', (data) => {
     listMessagesRef.insertAdjacentHTML('beforeend',
-      `<li class="message"><p>${data.username}</p><p>${data.message}</p></li>`);
+      `<li class="message"><p><b>${data.username}</b><br>${data.message}</p></li>`);
     
     listMessagesRef.scrollTo({
       top: listMessagesRef.scrollHeight,
